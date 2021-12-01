@@ -1,16 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div id="app">
+    <Header />
+    <Counter />
+    <Footer />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import Counter from "./components/Counter.vue";
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    HelloWorld,
+    Counter,
+    Header,
+    Footer,
   },
 });
 </script>
@@ -22,6 +29,14 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 </style>
